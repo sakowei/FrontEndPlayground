@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="cmn-hans">
+<head>
+  <meta charset="UTF-8">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="css/lgtdrk.css">
+  <title>深色模式切换</title>
+</head>
+<body>
+  <div class="switcher">
+    <ion-icon name="sunny-outline"></ion-icon>
+    <div class="toggle">
+      <div class="tgl-cir"></div>
+    </div>
+    <ion-icon name="moon-outline"></ion-icon>
+  </div>
+</body>
+<script>
+  var html = document.querySelector('html');
+  var toggle = document.querySelector('.toggle');
+  var circle = document.querySelector('.tgl-cir');
+  document.querySelector('.switcher').addEventListener('click', function(){
+    if(html.classList.contains('dark')) {
+      html.classList.remove('dark');
+      toggle.style.backgroundColor = "#ccc";
+      circle.style.backgroundColor = "#fff";
+
+    } else {
+      html.classList.add('dark');
+      toggle.style.backgroundColor = "#007acc";
+      circle.style.backgroundColor = "#fff";
+    }
+  } )
+  
+</script>
+</html>
