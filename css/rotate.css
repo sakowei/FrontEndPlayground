@@ -1,0 +1,60 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapi.com/css?family=Acme:200,400,500,600);
+:root {
+  --offset: 6px;
+}
+
+h2 {
+  width: 980px;
+  color: #333;
+  line-height: 1.02em;
+  letter-spacing: -.02em;
+  font-size: 180px;
+  font-family: 'Acme';
+}
+
+.mask {
+  height: 186px;
+  position: relative;
+  margin-top: var(--offset);
+  overflow: hidden;
+}
+
+.mask span {
+  display: block;
+  position: absolute;
+  top: 180px;
+  padding-bottom: var(--offset);
+  background-size: 100% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.mask span[data-show] {
+  transform: translateY(-100%);
+  transition: .5s transform ease-in-out;
+}
+
+.mask span[data-up] {
+  transform: translateY(-200%);
+  transition: .5s transform ease-in-out;
+}
+
+.mask span:nth-child(1) {
+  background-image: linear-gradient(45deg, #0ecffe, 50%, #07a6f1);
+}
+
+.mask span:nth-child(2) {
+  background-image: linear-gradient(45deg, #18e198, 50%, #0ec15d);
+}
+
+.mask span:nth-child(3) {
+  background-image: linear-gradient(45deg, #8a7cfb, 50%, #633e9c);
+}
+
+.mask span:nth-child(4) {
+  background-image: linear-gradient(45deg, #fa7671, 50%, #f45f7f);
+}
