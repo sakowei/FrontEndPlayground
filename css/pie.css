@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #ccc;
+}
+
+.pie-chart {
+  --hue: 210;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: conic-gradient(
+    hsl(var(--hue), 50%, 70%) 0deg 50deg,
+    hsl(var(--hue), 50%, 60%) 50deg 100deg,
+    hsl(var(--hue), 50%, 50%) 100deg, 250deg,
+    hsl(var(--hue), 50%, 40%) 250deg, 270deg,
+    hsl(var(--hue), 50%, 30%)
+  );
+}
+
+.color-wheel {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: conic-gradient(
+    hsl(0deg, 100%, 50%),
+    hsl(45deg, 100%, 50%),
+    hsl(90deg, 100%, 50%),
+    hsl(135deg, 100%, 50%),
+    hsl(180deg, 100%, 50%),
+    hsl(225deg, 100%, 50%),
+    hsl(270deg, 100%, 50%),
+    hsl(360deg, 100%, 50%)
+  );
+}

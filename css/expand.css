@@ -1,0 +1,94 @@
+@charset "UTF-8";
+:root {
+  font-size: 15px;
+  font-family: Maven Pro;
+  background-color: #333;
+
+  --body-width: 480px;
+  --card-width: 420px;
+  --card-height: 280px;
+  --img-height: 226px;
+  --img-height-expanded: 320px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: auto;
+  padding: 1rem 0;
+  width: var(--body-width);
+  background-color: #eee;
+}
+
+body.noscroll {overflow: hidden;}
+
+.card {
+  margin: 1rem 0;
+  border-radius: 1rem;
+  width: var(--card-width);
+  height: var(--card-height);
+  background-color: #fff;
+  box-shadow: 0 .2rem 2rem rgba(0, 0, 0, .1);
+  transition: .3s all cubic-bezier(0, 1, .95, 1.05);
+  cursor: pointer;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: var(--img-height);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  object-fit: cover;
+}
+
+.card h4 {
+  margin: 0;
+  padding: .8rem 1.2rem;
+  padding-bottom: 0;
+  background-color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+  letter-spacing: -.5px;
+}
+
+.card .wrapper {
+  height: 0;
+  overflow: hidden;
+  transition: .3s all ease-out;
+  opacity: .8;
+}
+
+.wrapper .content {
+  padding: 0 1.2rem;
+  background-color: #fff;
+  overflow: auto;
+}
+
+.card p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.card.active {
+  border-radius: 0;
+  transform-origin: 50% 0;
+  transform: translateY(var(--offset-top)) scale(calc(480/420));
+}
+
+.card.active h4 { padding-bottom: .8rem; }
+
+.card.active img {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  height: var(--img-height-expanded);
+}
+
+.card.active .wrapper {
+  height: 100vh;
+  transition: .3s all ease-in;
+  opacity: 1;
+}

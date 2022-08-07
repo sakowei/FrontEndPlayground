@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="cmn-hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>计数器</title>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <style type="text/css">
+    body{display:flex;justify-content:center;align-items:center;margin-top:40px}
+    #counter{display:inline-flex;border:3px solid hsl(210,100%,50%);border-radius:20px;background-color:hsl(210,100%,50%);box-shadow:0 0 8px rgba(0,0,0,.4)}
+    #counter button{display:inline-block;padding:0;margin:0;border:0;background-color:transparent;color:#fff;font-size:24px;width:32px;height:32px;outline:none}
+    #counter input[type="text"]{display:inline-block;height:32px;padding:0;margin:0;border:0;outline:none;width:60px;text-align:center;font-size:22px;border-radius:2px}
+  </style>
+</head>
+<body>
+  <div id="counter">
+    <button id="subtract">-</button>
+    <input type="text" value="0">
+    <button id="add">+</button>
+  </div>
+</body>
+<script>
+  var count = 0;
+  $('input[type="text"]').val(count);
+  $('#subtract').on('click', function(e) {
+    count--;
+    $('input[type="text"]').val(count);
+  });
+  $('#add').on('click', function(e) {
+    count++;
+    $('input[type="text"]').val(count);
+  });
+  $('input[type="text"]').on('change', (e) => {
+    count = e.target.value;
+  });
+</script>
+</html>
