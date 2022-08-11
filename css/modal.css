@@ -1,0 +1,91 @@
+@charset "UTF-8";
+:root {
+  --bg-color: hsl(210, 100%, 70%);
+  --text-color: #333;
+  --green: #00b894;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(https://source.unsplash.com/1920x1080/?nature,mountain,night);
+  object-fit: cover;
+}
+
+h2 {
+  margin-bottom: 2em;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.button {
+  padding: 1rem 3rem;
+  border-radius: 12px;
+  color: var(--text-color);
+  font-size: 24px;
+  text-decoration: none;
+  background-color: #fff;
+  box-shadow: 0 5px 3px 0 #3333;
+}
+
+.button:hover { color: var(--green); }
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background-color: #0008;*/
+  backdrop-filter: blur(20px);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1000;
+}
+
+.modal:target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal > div {
+  position: relative;
+  padding: 2em;
+  width: 400px;
+  border-radius: 24px;
+  background: #fff;
+}
+
+.modal .close {
+  position: absolute;
+  right: 30px;
+  top: 32px;
+  color: #aaa;
+  font-size: 2.4em;
+  text-decoration: none;
+}
+
+.modal .modal-title {
+  color: var(--green);
+  font-size: 32px;
+  padding:  0 0 15px 0;
+}
+
+.modal-body {
+  font-size: 18px;
+  margin: 15px 0;
+  color: #666;
+}
