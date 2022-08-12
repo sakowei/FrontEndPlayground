@@ -1,0 +1,131 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:800);
+@keyframes el-hover {
+  0% { transform: scale(1); }
+  50% { transform: scale(.6); }
+  100% { transform: scale(1.5); }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-around;
+  min-height: 100vh;
+  font-family: Ubuntu;
+  background: rgb(205,205,205);
+  background: linear-gradient(150deg, rgba(205,205,205,1) 0%, rgba(255,255,255,1) 40%, rgba(249,249,249,1) 100%);
+}
+
+.table-top {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 80rem;
+  margin: 0 auto;
+}
+
+.table-bottom {
+  width: 80rem;
+  margin: .5rem auto;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 4rem;
+  height: 100%;
+  margin: 0 .3rem;
+}
+
+.col-element, .ln-element {
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  border-radius: 16px;
+  font-size: 32px;
+  margin: .3rem 0;
+  font-weight: 800;
+  text-align: center;
+  cursor: pointer;
+}
+
+.alkaline {
+  background-color: #00005B;
+  color: #9999FF;
+}
+
+.alkearth {
+  background-color: #330000;
+  color: #FF9A00;
+}
+
+.transitions{
+  background-color: #001E36;
+  color: #31A8FF;
+}
+
+.nonmetal {
+  background-color: #1E3101;
+  color: #99E83F;
+}
+
+.metalloid {
+  background-color: #000B1D;
+  color: #FA0F00;
+}
+
+.unknown {
+  background-color: #D1D1D1;
+  color: #000B1D;
+}
+
+.bases {
+  background-color: #49021F;
+  color: #FF3366;
+}
+
+.halogens {
+  background-color: #470137;
+  color: #FF61F6;
+}
+
+.noblegas {
+  background-color: #B30B00;
+  color: #fff;
+}
+
+.actinide {
+  background-color: #06283d;
+  color: #deff6f;
+}
+
+.lanthanide {
+  background-color: #15133c;
+  /*color: #f1eee9;*/
+  color: #fff;
+}
+
+.line {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 4rem;
+  margin: 1rem auto;
+}
+
+.ln-element {
+  margin: 0 .3rem;
+}
+
+.col-element:hover, .ln-element:hover {
+  animation: el-hover 1s ease-in-out forwards;
+}

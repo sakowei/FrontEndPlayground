@@ -1,0 +1,159 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 { margin: .5rem 0; }
+
+header .desc { color: #666;}
+
+.accordion {
+  width: 100%;
+  max-width: 1080px;
+  height: 250px;
+  overflow: hidden;
+  margin: 2em 0; 
+}
+
+.accordion ul {
+  display: table;
+  table-layout: fixed;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+.accordion ul li {
+  position: relative;
+  display: table-cell;
+  vertical-align: bottom;
+  width: 16.7%;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all .5s ease-in-out;
+}
+
+.content {
+  position: relative;
+  display: block;
+  padding: 16px 24px;
+  overflow: hidden;
+  width: 100%;
+  height: 250px;
+  color: #fff;
+  z-index: 10;
+}
+
+.content * {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transform: translateX(-20px);
+  transition: all .4s ease-in;
+  opacity: 0;
+}
+
+.content h2 {
+  top: 160px;
+  margin-bottom: 2px;
+  text-overflow: clip;
+  font-size: 24px;
+}
+
+.content p {
+  top: 160px;
+  font-size: 14px;
+}
+
+.accordion ul li:nth-child(1) {
+  background-image: url(https://picsum.photos/720/250?random=1);
+}
+.accordion ul li:nth-child(2) {
+  background-image: url(https://picsum.photos/720/250?random=2);
+}
+.accordion ul li:nth-child(3) {
+  background-image: url(https://picsum.photos/720/250?random=3);
+}
+.accordion ul li:nth-child(4) {
+  background-image: url(https://picsum.photos/720/250?random=4);
+}
+.accordion ul li:nth-child(5) {
+  background-image: url(https://picsum.photos/720/250?random=5);
+}
+
+.accordion ul:hover li, .accordion ul:focus-within li { width: 8%; }
+
+.accordion ul li:focus { outline: none ;}
+
+.accordion ul:hover li:hover,
+.accordion ul li:focus,
+.accordion ul:focus-within li:focus {
+  width: 60%;
+}
+
+.accordion ul:hover li:hover .content,
+.accordion ul li:focus .content,
+.accordion ul:focus-within li:focus .content {
+  background: rgba(0, 0, 0, .4);
+}
+
+.accordion ul:hover li:hover .content *,
+.accordion ul li:focus .content *,
+.accordion ul:focus-within li:focus .content * {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.accordion ul:hover li { width: 8% !important; }
+
+.accordion ul:hover li .content * { opacity: 0 !important; }
+
+.accordion ul:hover li:hover { width: 60% !important; }
+
+.accordion ul:hover li:hover .content {
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.accordion ul:hover li:hover .content * {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+}
+
+@media screen and (max-width: 640px){
+  .accordion { height: auto; }
+
+  .accordion ul li,
+  .accordion ul li:hover,
+  .accordion ul:hover li,
+  .accordion ul:hover li:hover {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    transition: none;
+  }
+}
+
+footer {
+  font-size: 13px;
+  color: #666;
+}
