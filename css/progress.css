@@ -1,0 +1,64 @@
+@charset "UTF_8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+:root {
+  --main-color: hsl(210, 60%, 50%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--main-color);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+  width: 420px;
+  border-radius: 8px;
+  background-color: #fff;
+  row-gap: 30px;
+}
+
+.circle-pgs {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: conic-gradient(var(--main-color) 3.6deg, #ededed 0deg);
+}
+
+.circle-pgs::before {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.pgs-value {
+  position: relative;
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.text {
+  font-size: 30px;
+  font-weight: 50%;
+  color: #606060;
+}

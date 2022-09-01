@@ -1,0 +1,103 @@
+@charset "UTF-8";
+:root {
+  --blue: #4bb8ff;
+  --bg-color: #f0f0f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #212121;
+}
+
+.card {
+  position: relative;
+  width: 210px;
+  height: 284px;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  text-align: center;
+  transition: all .5s;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, .62);
+  background-color: var(--blue);
+}
+
+.card .blob {
+  margin: 0 auto;
+  width: 75%;
+  height: 10px;
+  border-radius: 0 0 30px 30px;
+  background-color: var(--blue);
+  visibility: visible;
+  transition: all .3s;
+}
+
+.card:hover .blob { height: 0; }
+
+.card .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto 10px auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 11px;
+  background-color: var(--blue);
+  transition: all .3s;
+}
+
+.card:hover .img {
+  width: 100%;
+  height: 70%;
+  border-radius: 10px 0 0;
+  margin: 0 auto;
+  border-radius: 10px 10px 0 0;
+  background-color: var(--bg-color);
+  z-index: 100;
+}
+
+.card h2 {
+  padding: 15px 10px;
+  font-size: 25px;
+  line-height: 1.1;
+  z-index: -99;
+  color: #333;
+  transition: all .1s;
+}
+
+.card span {font-size: 18px;}
+
+.card:hover h2 {
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  transition: all .5s;
+}
+
+.card > p {
+  opacity: 0;
+  transition: all .75s;
+}
+
+.card > p > svg { padding: 5px; }
+
+.card:hover p {
+  position: absolute;
+  bottom: 15px;
+  left: 50px;
+  opacity: 1;
+  transition: all .1s;
+}
