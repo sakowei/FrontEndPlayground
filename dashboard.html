@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="cmn-hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>后台仪表板</title>
+  <link rel="stylesheet" href="./css/dashboard.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <script src="./js/dashboard.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <!-- 垂直导航 -->
+    <nav>
+      <div class="logo">
+        <div class="logo-img"><img src="img/sk-logo.svg"></div>
+      </div>
+      <div class="menu">
+        <ul class="menu-links">
+          <li><a href="#"><i class="uil uil-estate"></i><span class="link-name">仪表板</span></a></li>
+          <li><a href="#"><i class="uil uil-files-landscapes"></i><span class="link-name">内容</span></a></li>
+          <li><a href="#"><i class="uil uil-chart"></i><span class="link-name">分析</span></a></li>
+          <li><a href="#"><i class="uil uil-thumbs-up"></i><span class="link-name">按赞</span></a></li>
+          <li><a href="#"><i class="uil uil-comments"></i><span class="link-name">评论</span></a></li>
+          <li><a href="#"><i class="uil uil-share"></i><span class="link-name">转发</span></a></li>
+        </ul>
+
+        <ul class="logout-mode">
+          <li><a href="#"><i class="uil uil-signout"></i><span class="link-name">登出</span></a></li>
+          <li class="mode">
+            <a href="#">
+              <i class="uil uil-moon"></i>
+              <span class="link-name">深色模式</span>
+            </a>
+            <div class="mode-toggle"><span class="switch"></span></div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- 仪表板 -->
+    <section class="dashboard">
+      <div class="top">
+        <i class="uil uil-bars sidebar-toggle"></i>
+        <div class="search-box">
+          <i class="uil uil-search"></i>
+          <input autocomplete="off" type="text" placeholder="搜索">
+        </div>
+        <img src="img/avatar.jpg">
+      </div>
+
+      <div class="content">
+        <div class="overview">
+          <div class="title">
+            <i class="uil uil-tachometer-fast-alt"></i>
+            <span class="text">总览</span>
+          </div>
+          <div class="boxes">
+            <div class="box box1">
+              <i class="uil uil-thumbs-up"></i>
+              <span class="text">按赞总数</span>
+              <span class="number">150,210</span>
+            </div>
+            <div class="box box2">
+              <i class="uil uil-comments"></i>
+              <span class="text">评论总数</span>
+              <span class="number">120,210</span>
+            </div>
+            <div class="box box3">
+              <i class="uil uil-share"></i>
+              <span class="text">转发总数</span>
+              <span class="number">100,210</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="activity">
+          <div class="title">
+            <i class="uil uil-clock-three"></i>
+            <span class="text">近期动向</span>
+          </div>
+
+          <div class="acti-data">
+            <div class="data names">
+              <span class="data-name">昵称</span>
+              <span class="data-list">AA</span>
+              <span class="data-list">BB</span>
+              <span class="data-list">CC</span>
+              <span class="data-list">DD</span>
+              <span class="data-list">EE</span>
+              <span class="data-list">FF</span>
+              <span class="data-list">GG</span>
+            </div>
+            <div class="data email">
+              <span class="data-name">电邮</span>
+              <span class="data-list">AA@demo.com</span>
+              <span class="data-list">BB@demo.com</span>
+              <span class="data-list">CC@demo.com</span>
+              <span class="data-list">DD@demo.com</span>
+              <span class="data-list">EE@demo.com</span>
+              <span class="data-list">FF@demo.com</span>
+              <span class="data-list">GG@demo.com</span>
+            </div>
+            <div class="data date">
+              <span class="data-name">关注日期</span>
+              <span class="data-list">Oct.12</span>
+              <span class="data-list">Oct.12</span>
+              <span class="data-list">Oct.13</span>
+              <span class="data-list">Oct.13</span>
+              <span class="data-list">Oct.14</span>
+              <span class="data-list">Oct.14</span>
+              <span class="data-list">Oct.15</span>
+            </div>
+            <div class="data type">
+              <span class="data-name">类型</span>
+              <span class="data-list">新人</span>
+              <span class="data-list">成员</span>
+              <span class="data-list">成员</span>
+              <span class="data-list">新人</span>
+              <span class="data-list">新人</span>
+              <span class="data-list">成员</span>
+              <span class="data-list">成员</span>
+            </div>
+            <div class="data status">
+              <span class="data-name">状态</span>
+              <span class="data-list">已赞</span>
+              <span class="data-list">已赞</span>
+              <span class="data-list">已赞</span>
+              <span class="data-list">已赞</span>
+              <span class="data-list">已赞</span>
+              <span class="data-list">已赞</span>
+              <span class="data-list">已赞</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
