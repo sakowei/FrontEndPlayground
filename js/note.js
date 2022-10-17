@@ -36,14 +36,13 @@ function createNote(id, type, text="") {
   note.classList.add(type);
 
   let header = document.createElement('header');
-  let headerChildren = `
+  header.innerHTML = `
   <h4>note-${id}</h4>
   <div class="trial flex-center">
     <i class="ri-close-line close" onclick="deleteNote(${id})"></i>
   </div>
   `;
-  header.innerHTML = headerChildren;
-  
+   
   content.classList.add('content');
   content.innerHTML = `
     <div class="textarea" contenteditable="true" onblur="autoSave(event, ${id}, '${type}')">${text}</div>
